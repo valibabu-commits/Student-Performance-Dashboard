@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Responsive student performance dashboard" />
+    <title>EduTrack · Student Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#overview" aria-label="EduTrack home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>edutrack</span>
+        </a>
+
+        <nav class="nav-links">
+          <a class="nav-link active" href="#overview">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-4H4v4Zm10 0h6v-9h-6v9Zm0-16v4h6V4h-6Z" /></svg>
+            <span>Overview</span>
+          </a>
+          <a class="nav-link" href="#courses">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20a1 1 0 0 1 1 1v14.5a.5.5 0 0 1-.8.4A5.5 5.5 0 0 0 17 18H5.5A2.5 2.5 0 0 1 3 15.5v-10ZM6 6h11M6 10h9M6 14h6" /></svg>
+            <span>My Courses</span>
+          </a>
+          <a class="nav-link" href="#assignments">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5h6m-5-2h4a1 1 0 0 1 1 1v2H9V4a1 1 0 0 1 1-1Zm-4 3h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm2 5h10m-10 4h6" /></svg>
+            <span>Assignments</span>
+            <b class="nav-badge">3</b>
+          </a>
+          <a class="nav-link" href="#calendar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v3m12-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm3 8h3v3H8v-3Z" /></svg>
+            <span>Calendar</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="help-card">
+            <span class="sparkle">✦</span>
+            <strong>Need a hand?</strong>
+            <p>Explore quick study tips curated for you.</p>
+            <button type="button" id="tipsButton">View tips <span>→</span></button>
+          </div>
+          <a class="nav-link" href="#settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.25A3.25 3.25 0 1 0 12 8.75a3.25 3.25 0 0 0 0 6.5Zm0-12.25 1.05 2.45c.58.2 1.12.51 1.59.91l2.65-.25.89 1.54-1.6 2.12c.11.59.11 1.2 0 1.79l1.6 2.12-.89 1.54-2.65-.25a6.67 6.67 0 0 1-1.59.91L12 21l-1.05-2.45a6.67 6.67 0 0 1-1.59-.91l-2.65.25-.89-1.54 1.6-2.12a6.76 6.76 0 0 1 0-1.79l-1.6-2.12.89-1.54 2.65.25c.47-.4 1.01-.71 1.59-.91L12 3Z" /></svg>
+            <span>Settings</span>
+          </a>
+          <a class="profile-mini" href="#profile">
+            <span class="avatar avatar-small">AM</span>
+            <span><strong>Alex Morgan</strong><small>Student</small></span>
+            <span class="more">•••</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <button class="mobile-menu" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="greeting">
+            <p>Wednesday, May 15</p>
+            <h1>Good morning, Alex <span>👋</span></h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-button notification" type="button" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4" /></svg><i></i></button>
+            <button class="avatar avatar-button" type="button" aria-label="Open account menu">AM</button>
+          </div>
+        </header>
+
+        <section class="welcome-banner">
+          <div class="welcome-copy">
+            <span class="eyebrow">YOUR LEARNING JOURNEY</span>
+            <h2>Every little step<br />gets you closer.</h2>
+            <p>You've completed <strong>72%</strong> of this semester's learning goals. Keep the momentum going!</p>
+            <a href="#progress">View my progress <span>→</span></a>
+          </div>
+          <div class="banner-art" aria-hidden="true">
+            <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+            <span class="star star-one">✦</span><span class="star star-two">✦</span><span class="star star-three">✦</span>
+            <div class="art-laptop"><span></span></div>
+            <div class="art-person"><span class="hair"></span><span class="face"></span><span class="torso"></span><span class="arm"></span></div>
+            <div class="paper paper-one"></div><div class="paper paper-two"></div>
+          </div>
+        </section>
+
+        <section class="stat-grid" aria-label="Performance summary">
+          <article class="stat-card grade-card">
+            <div class="card-title"><span>Current GPA</span><button type="button" class="dots" aria-label="More GPA options">•••</button></div>
+            <div class="stat-main"><strong>3.8</strong><span class="trend up">↗ 0.2 <small>vs last term</small></span></div>
+            <div class="score-track"><span style="width: 76%"></span></div>
+            <p>Great work! You're on track.</p>
+          </article>
+          <article class="stat-card attendance-card">
+            <div class="card-title"><span>Attendance</span><button type="button" class="dots" aria-label="More attendance options">•••</button></div>
+            <div class="stat-main"><strong>94<span>%</span></strong><span class="trend up">↗ 2% <small>this month</small></span></div>
+            <div class="attendance-row"><span class="calendar-icon">▦</span><p><strong>12</strong> days attended this month</p></div>
+          </article>
+          <article class="stat-card assignment-card">
+            <div class="card-title"><span>Assignments</span><button type="button" class="dots" aria-label="More assignment options">•••</button></div>
+            <div class="assignment-content"><div class="donut" role="img" aria-label="18 of 24 assignments completed"><span><strong>18</strong><small>of 24</small></span></div><div><strong class="completed">Completed</strong><p>6 assignments left<br />this semester</p></div></div>
+          </article>
+        </section>
+
+        <section class="content-grid" id="progress">
+          <article class="panel performance-panel">
+            <div class="panel-heading">
+              <div><h2>Performance overview</h2><p>Your grade progression this semester</p></div>
+              <label class="select-wrap">This semester <select id="semesterSelect" aria-label="Select time range"><option>This semester</option><option>Last semester</option><option>Academic year</option></select><span>⌄</span></label>
+            </div>
+            <div class="chart-legend"><span><i class="legend-dot purple"></i> Average grade</span><span><i class="legend-dot blue"></i> Class average</span></div>
+            <div class="chart-wrap" id="performanceChart">
+              <div class="chart-y"><span>100</span><span>80</span><span>60</span><span>40</span><span>20</span></div>
+              <div class="chart-area">
+                <div class="chart-lines"><i></i><i></i><i></i><i></i><i></i></div>
+                <svg class="line-chart" viewBox="0 0 620 218" preserveAspectRatio="none" aria-label="Grade performance line chart" role="img">
+                  <defs><linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8077e8" stop-opacity=".25" /><stop offset="1" stop-color="#8077e8" stop-opacity="0" /></linearGradient></defs>
+                  <path class="area-fill" d="M0,162 C32,149 51,157 79,143 S119,109 155,111 S202,125 234,89 S277,112 310,93 S353,56 390,66 S433,52 466,79 S503,95 544,56 S584,63 620,28 L620,218 L0,218Z" />
+                  <path class="class-line" d="M0,151 C49,148 67,151 106,138 S168,143 201,126 S264,122 303,116 S352,113 393,104 S456,101 495,93 S557,84 620,76" />
+                  <path class="student-line" d="M0,162 C32,149 51,157 79,143 S119,109 155,111 S202,125 234,89 S277,112 310,93 S353,56 390,66 S433,52 466,79 S503,95 544,56 S584,63 620,28" />
+                  <g class="chart-point point-one"><circle cx="155" cy="111" r="7" /><circle cx="155" cy="111" r="3" /></g>
+                  <g class="chart-point point-two"><circle cx="390" cy="66" r="7" /><circle cx="390" cy="66" r="3" /></g>
+                  <g class="chart-point point-three"><circle cx="620" cy="28" r="7" /><circle cx="620" cy="28" r="3" /></g>
+                </svg>
+                <div class="tooltip-chart"><strong>92%</strong><span>Current average</span></div>
+                <div class="chart-x"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel upcoming-panel" id="assignments">
+            <div class="panel-heading"><div><h2>Upcoming</h2><p>Stay ahead of your schedule</p></div><a href="#calendar">View all</a></div>
+            <div class="upcoming-list">
+              <article class="task-card"><div class="task-icon purple-bg">∑</div><div class="task-info"><span class="due-tag soon">DUE TOMORROW</span><h3>Calculus problem set</h3><p>Mathematics · Unit 4</p></div><button class="task-arrow" type="button" aria-label="Open Calculus problem set">→</button></article>
+              <article class="task-card"><div class="task-icon orange-bg">✎</div><div class="task-info"><span class="due-tag">MAY 18</span><h3>History essay draft</h3><p>World History · Chapter 8</p></div><button class="task-arrow" type="button" aria-label="Open History essay draft">→</button></article>
+              <article class="task-card"><div class="task-icon blue-bg">⌁</div><div class="task-info"><span class="due-tag">MAY 20</span><h3>Lab report: Kinetics</h3><p>Chemistry · Module 5</p></div><button class="task-arrow" type="button" aria-label="Open Chemistry lab report">→</button></article>
+            </div>
+          </article>
+        </section>
+
+        <section class="courses-section" id="courses">
+          <div class="section-heading"><div><h2>My courses</h2><p>Continue where you left off</p></div><a href="#all-courses">See all courses <span>→</span></a></div>
+          <div class="course-grid">
+            <article class="course-card math-course"><div class="course-art"><span>∫</span><i class="shape-circle"></i><i class="shape-square"></i></div><div class="course-details"><span class="course-code">MATH · 204</span><h3>Advanced Calculus</h3><p>Prof. Eleanor Rodriguez</p><div class="course-progress"><div><span>Course progress</span><strong>78%</strong></div><i><b style="width:78%"></b></i></div></div></article>
+            <article class="course-card history-course"><div class="course-art"><span>⌛</span><i class="sun"></i><i class="column column-one"></i><i class="column column-two"></i></div><div class="course-details"><span class="course-code">HIST · 112</span><h3>World History</h3><p>Prof. James Anderson</p><div class="course-progress"><div><span>Course progress</span><strong>64%</strong></div><i><b style="width:64%"></b></i></div></div></article>
+            <article class="course-card chemistry-course"><div class="course-art"><span>⚗</span><i class="bubble bubble-one"></i><i class="bubble bubble-two"></i><i class="flask"></i></div><div class="course-details"><span class="course-code">CHEM · 181</span><h3>General Chemistry</h3><p>Prof. Priya Nair</p><div class="course-progress"><div><span>Course progress</span><strong>82%</strong></div><i><b style="width:82%"></b></i></div></div></article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="tipsModal" hidden>
+      <section class="tips-modal" role="dialog" aria-modal="true" aria-labelledby="tipsTitle">
+        <button class="close-modal" id="closeTips" type="button" aria-label="Close tips">×</button>
+        <span class="modal-icon">✦</span><h2 id="tipsTitle">Study smarter today</h2>
+        <p>Try 25 minutes of focused work, followed by a 5-minute reset. Small, repeatable sessions beat last-minute cramming.</p>
+        <button id="gotItButton" type="button">Got it</button>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
